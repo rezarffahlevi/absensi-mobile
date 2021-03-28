@@ -1,6 +1,6 @@
 export const colors = {
-  primary: '#00cdcd',
-  inactive: '#6dd0d0',
+  primary: '#0075FF',
+  inactive: '#008CFF',
   text: '#000',
   textReverse: '#FFF',
   // tabBar: "#222326",

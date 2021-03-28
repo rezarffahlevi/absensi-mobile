@@ -12,7 +12,7 @@ const TopBar = ({
         top: 0,
         height: 56,
         width: "100%",
-        backgroundColor: colors.tabBar,
+        backgroundColor: colors.primary,
         justifyContent: "center",
       }}>
       <Text

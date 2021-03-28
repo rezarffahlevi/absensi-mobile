@@ -71,7 +71,7 @@ const HomeRoot = ({ route }) => {
             initialRouteName="Home"
             tabBarOptions={{
                 style: {
-                    backgroundColor: colors.tabBar,
+                    backgroundColor: colors.primary,
                     padding: 2,
                     height: BAR_HEIGHT,
                     borderTopColor: colors.background,
@@ -117,7 +117,7 @@ const Main = ({ isLogin, setIsLogin }) => {
                 initialRouteName="HomeRoot"
                 screenOptions={{
                     headerStyle: {
-                        backgroundColor: colors.tabBar,
+                        backgroundColor: colors.primary,
                     },
                     headerTitleStyle: {
                         color: colors.white,

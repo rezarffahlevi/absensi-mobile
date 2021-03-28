@@ -14,7 +14,7 @@ import {
     ActivityIndicator
 } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { colors, fontsFamilys } from "../../theme";
+import { colors, fontsFamilys, images } from "../../theme";
 import TopBar from '../../components/TopBar';
 import AsyncStorage from '@react-native-community/async-storage'
 import { CONSTANT } from '../../helpers/constant'
@@ -83,7 +83,7 @@ const OTP = ({navigation, route}) => {
                     paddingVertical: 15,
                     paddingHorizontal: 15
                 }}>
-                    <Image source={require('../../assets/icons/logo-black.png')}
+                    <Image source={images.logo}
                         style={{ height: 80, width: 250, resizeMode: 'contain', marginBottom: 15 }}
                     />
                     <Text style={{
