@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SafeAreaView, ScrollView, StatusBar, View, StyleSheet, TouchableOpacity, Image, Text, ImageBackground, ActivityIndicator, FlatList } from "react-native";
+import { SafeAreaView, ScrollView, StatusBar, View, StyleSheet, TouchableOpacity, Image, Text, ImageBackground, ActivityIndicator, FlatList, Dimensions } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { colors, fontsFamilys } from "../../theme";
 import TopBar from '../../components/TopBar';
@@ -10,7 +10,7 @@ import { fetchApi, postApi, fetchCheckAccount } from '../../services/Api';
 import Geocoder from 'react-native-geocoding';
 
 // Geocoder.init("AIzaSyD-fQ4pEHlSzYmAwLIWM7D5jj7hbg5SKYk");
-
+const dimensions = Dimensions.get('window');
 const History = ({ navigation, route }) => {
     const props = route.params;
     const limit = 10;
@@ -123,11 +123,12 @@ const History = ({ navigation, route }) => {
                     // onLogout();
                 }}
             >
+
                 <Image
                     source={{ uri: dt.link }}
                     style={{
+                        minHeight: '100%',
                         width: 100,
-                        height: 110,
                         borderRadius: 5,
                     }} resizeMode='cover' />
                 <View style={{ margin: 10, flex: 1 }}>
@@ -139,7 +140,7 @@ const History = ({ navigation, route }) => {
                             style={{ marginTop: 5, marginRight: 5 }}
                         />
                         <Text style={{
-                            fontSize: 19,
+                            fontSize: 0.048 * dimensions.width,
                             fontFamily: fontsFamilys.bold,
                             color: colors.textReverse,
                         }}>{dt.tgl}</Text>

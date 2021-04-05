@@ -12,6 +12,7 @@ import { RNCamera } from 'react-native-camera';
 import DatePicker from 'react-native-date-picker'
 import BottomSheet from "../../components/BottomSheet";
 import { launchCamera, launchImageLibrary } from "react-native-image-picker";
+import moment from "moment";
 
 const LeaveRequest = ({ navigation, route }) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -76,6 +77,7 @@ const LeaveRequest = ({ navigation, route }) => {
                 longitude: null,
                 alamat: null,
                 status: type,
+                date: moment(date).format('YYYY-MM-DD HH:mm:ss'),
                 notes: notes == '' ? null : notes,
                 photo: photo ? photo.replace('data:image/png;base64,', '') : null,
             }

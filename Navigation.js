@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { View, ActivityIndicator, Alert, Platform, LogBox } from 'react-native';
+import { View, ActivityIndicator, Alert, Platform, LogBox, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, TransitionPresets, HeaderBackButton } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import AsyncStorage from '@react-native-community/async-storage';
-import { colors, fontsFamilys } from "./src/theme";
+import { colors, fontsFamilys, images } from "./src/theme";
 import UIHelper from "./src/helpers/UIHelper"
 import { CONSTANT } from './src/helpers/constant'
 
@@ -188,6 +188,7 @@ const Loading = ({ }) => (
         justifyContent: 'center',
         backgroundColor: colors.background,
     }} >
+        <Image source={images.logo} style={{ height: 150, width: 150, resizeMode: 'contain', opacity: 0.5, marginBottom: 30 }} />
         <ActivityIndicator size='large' color={colors.primary} />
     </View >
 )

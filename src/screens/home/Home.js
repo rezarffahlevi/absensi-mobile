@@ -176,7 +176,7 @@ const Home = ({ navigation, route }) => {
             style={{ width: "100%", flex: 1 }}
             contentContainerStyle={{ alignItems: 'center' }}
             showsVerticalScrollIndicator={false}>
-            <Image source={user?.photo ? { uri: user.photo } : images.logo} style={{ height: 100, width: 100, resizeMode: 'contain', borderRadius: 50, marginTop: 20 }} />
+            <Image source={user?.photo ? { uri: user.photo } : images.logo} style={{ height: 100, width: 100, resizeMode: 'contain', marginTop: 20 }} />
             <Text style={{
               color: colors.text,
               fontSize: 21,
